@@ -84,6 +84,7 @@ final class HomePresenter implements HomeContract.Presenter {
             processEmptyCollection();
         } else {
             List<Comment> comments = (List<Comment>) items.getItems();
+            Log.e(TAG, "processCollection" + items.getItems().size());
             mHomeView.showModelList( items.getItems());
         }
     }

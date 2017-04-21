@@ -90,7 +90,9 @@ public class HomeActivityFragment extends Fragment implements HomeContract.HomeV
 
     @Override
     public void showModelList(List<Comment> items) {
-
+        mAdapter.swapList(items);
+        mRecyclerView.setVisibility(View.VISIBLE);
+        //mEmptyView.setVisibility(View.GONE);
     }
 
     @Override
