@@ -13,7 +13,7 @@ public class Comment implements IRemoteModel{
     private String mComment;
 
 
-    public Comment(int uId, String comment, String uniqueId) {
+    public Comment(int uId, String uniqueId, String comment) {
         this.mId = uId;
         this.mComment = comment;
         this.mUniqueId = uniqueId;
