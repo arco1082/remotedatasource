@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
@@ -48,11 +49,13 @@ public class HomeActivityFragment extends Fragment implements HomeContract.HomeV
         final View fragmentView = inflater.inflate(R.layout.fragment_main, container, false);
         ButterKnife.bind(this, fragmentView);
 
-        GridLayoutManager lLayout = new GridLayoutManager(getActivity(), 2);
-        mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.setLayoutManager(lLayout);
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(getActivity());
+        mLinearLayoutManager.setReverseLayout(true);
+        mLinearLayoutManager.setStackFromEnd(true);
 
-        mRecyclerView.setLayoutManager(lLayout);
+        mRecyclerView.setLayoutManager(mLinearLayoutManager);
+        mRecyclerView.setHasFixedSize(true);
+
         mRecyclerView.setHasFixedSize(true);
         mAdapter = new ItemsAdapter(getActivity(), R.layout.comment_row);
         mRecyclerView.setAdapter(mAdapter);

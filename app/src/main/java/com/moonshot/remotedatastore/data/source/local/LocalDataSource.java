@@ -13,8 +13,6 @@ import com.moonshot.remotedatastore.data.models.Comment;
 import com.moonshot.remotedatastore.data.models.RemoteModelCollection;
 import com.moonshot.remotedatastore.data.source.DataSource;
 import com.moonshot.remotedatastore.rx.BaseSchedulerProvider;
-import com.squareup.sqlbrite.BriteDatabase;
-import com.squareup.sqlbrite.SqlBrite;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -24,7 +22,6 @@ import java.util.List;
 import javax.inject.Singleton;
 
 import io.reactivex.Observable;
-import rx.functions.Func1;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 /**
@@ -35,8 +32,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
 public class LocalDataSource implements DataSource {
     private static String TAG = com.moonshot.remotedatastore.data.source.remote.RemoteDataSource.class.getSimpleName();
 
-    @NonNull
-    private Func1<Cursor, Comment> mCommentMapperFunction;
     private Context mContext;
 
     public LocalDataSource(Context context) {

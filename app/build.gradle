@@ -30,7 +30,6 @@ dependencies {
     //RX
     compile project.DEPENDENCY_RX_ANDROID
     compile project.DEPENDENCY_RX_JAVA
-    compile project.DEPENDENCY_SQL_BRITE
     //Dagger
     compile project.DEPENDENCY_GDAGGER
     compile project.DEPENDENCY_JAVAX_ANNOTATION
