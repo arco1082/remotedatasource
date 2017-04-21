@@ -15,10 +15,13 @@ import com.moonshot.remotedatastore.data.models.IRemoteModel;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 import static com.google.common.base.Preconditions.checkNotNull;
 
 public class HomeActivity extends AppCompatActivity {
-
+    @Inject
+    HomePresenter mPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
